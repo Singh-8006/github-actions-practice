@@ -1,21 +1,4 @@
-name: Hello Actions
+- uses: actions/checkout@v4
 
-on:
-  workflow_dispatch:
-
-jobs:
-  hello:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Print Date
-        run: date
-
-      - name: Show Current Directory
-        run: pwd
-
-      - name: List Files
-        run: ls -la
-
-      - name: Print Message
-        run: echo "GitHub Actions is working successfully"
+- name: Read File
+  run: cat hello.txt
